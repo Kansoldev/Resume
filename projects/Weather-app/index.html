@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163444021-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-163444021-1');
+		</script>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Weather App</title>
+		<link rel="icon" href="../../dist/img/favicon.png">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|">
+		<link rel="stylesheet" href="weather.css">
+	</head>
+
+	<body>
+		<div class="hero">
+			<div class="container">
+				<form class="find-location">
+					<input type="text" placeholder="Find your location...">
+					<input type="submit" value="Find">
+				</form>
+			</div>
+		</div>
+
+		<div class="forecast-table">
+			<div class="container">
+				<div class="forecast-container">
+					<div class="today forecast">
+						<div class="forecast-content">
+							<div class="location" id="location">New York</div>
+							<div class="degree">
+								<div class="num" id="degree">23<sup>o</sup>C</div>
+								<div class="forecast-icon">
+									<img src="icon-1.svg" id="weather-icon">
+								</div>	
+							</div>
+							<p style="font-weight: bold;margin-top: 5px;font-size: 20px;" id="description">Rainy</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="weather.js"></script>
+	</body>
+</html>
