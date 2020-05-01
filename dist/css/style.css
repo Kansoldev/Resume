@@ -205,23 +205,76 @@ button {
   padding-top: 50px;
   padding-bottom: 90px;
 }
-.home_gallery_area .h_gallery_item .g_img_item {
+.home_gallery_area .media-1 {
   position: relative;
+  display: block;
   overflow: hidden;
-  text-align: center !important;
-  border-radius: 5px;
-}
-.home_gallery_area .h_gallery_item .g_img_item img {
-  border-radius: 10px;
-}
-.home_gallery_area .h_gallery_item h4 {
-  color: #333;
-  font-size: 2rem;
-  margin-top: 22px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 @media (max-width: 767px) {
-  .home_gallery_area .h_gallery_item h4 {
-    margin-bottom: 60px;
+  .home_gallery_area .media-1 {
+    margin-bottom: 20px;
+  }
+}
+.home_gallery_area .media-1::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 43px;
+  right: 43px;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s all ease;
+}
+.home_gallery_area .media-1:hover .media-1-content, .home_gallery_area .media-1:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  .home_gallery_area .media-1:hover .media-1-content, .home_gallery_area .media-1:hover::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.home_gallery_area .media-1 img {
+  width: 80%;
+  border-radius: 20px;
+}
+.home_gallery_area .media-1 .media-1-content {
+  z-index: 4;
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.home_gallery_area .media-1 .media-1-content h2 {
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-transition: 0.4s all ease-in-out;
+  -o-transition: 0.4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
+  bottom: -10px;
+  margin-bottom: 0px;
+}
+.home_gallery_area .project-name {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 767px) {
+  .home_gallery_area .project-name {
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -342,15 +395,14 @@ button {
   z-index: 1;
   margin-top: 200px;
 }
-.welcome_area .welcome_text h4 {
+.welcome_area h4 {
   color: #222;
   font-size: 3rem;
   margin-bottom: 18px;
   font-weight: bold;
   text-transform: uppercase;
 }
-.welcome_area .welcome_text p {
-  max-width: 495px;
+.welcome_area p {
   margin-bottom: 40px;
   font-size: 2rem;
   text-align: justify;
