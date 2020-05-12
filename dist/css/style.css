@@ -404,8 +404,9 @@ button {
 }
 .welcome_area p {
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: 1.89rem;
   text-align: justify;
+  text-indent: 8px;
 }
 .welcome_area .tools_expert {
   padding-top: 10px;
