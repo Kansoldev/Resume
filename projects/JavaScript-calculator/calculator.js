@@ -28,11 +28,11 @@ class Calculator {
 		}
 
 		this.operation = operation;
-		this.previousOperand = this.currentOperand + " " + operation.toString();
+		this.previousOperand = `${this.currentOperand} ${operation.toString()}`;
 		this.currentOperand = "";
 	}
 
-	calculate() {
+	calculate(equal) {
 		const current = parseFloat(this.currentOperand);
 		const previous = parseFloat(this.previousOperand);
 		let total;
@@ -50,8 +50,16 @@ class Calculator {
 			case "*":
 				total = previous * current;
 				break;
+			case equal:
+				return;
 			default:
 				return
+		}
+
+		if (!this.currentOperand) {
+			return;
+		} else if (!this.previousOperand) {
+			return this.currentOperand;
 		}
 
 		this.currentOperand = total;
@@ -95,7 +103,7 @@ operations.forEach(operation => {
 })
 
 equalBtn.addEventListener("click", () => {
-	calculator.calculate()
+	calculator.calculate(equalBtn.textContent);
 	calculator.updateDisplay()
 });
 

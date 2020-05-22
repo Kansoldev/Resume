@@ -46,6 +46,23 @@ button {
   box-shadow: none !important;
 }
 
+.navbar-toggler {
+  outline: none !important;
+}
+.navbar-toggler .navbar-toggler-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.m-30 {
+  margin-left: 30px;
+}
+@media (max-width: 767px) {
+  .m-30 {
+    margin-left: 0px;
+  }
+}
+
 .p_120 {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -121,9 +138,6 @@ button {
 }
 .header_area .navbar {
   padding: 0;
-}
-.header_area .navbar .nav .nav-item {
-  margin-right: 50px;
 }
 .header_area .navbar .nav .nav-item:last-child {
   margin-right: 0;
@@ -304,7 +318,7 @@ button {
   color: #222;
 }
 .mytabs_area .tabs_inner .tab-content .tab-pane ul {
-  max-width: 460px;
+  max-width: 800px;
   margin: auto;
   position: relative;
   padding-top: 40px;
@@ -359,13 +373,23 @@ button {
   top: 4px;
   transform: translateX(-50%);
 }
+.mytabs_area .tabs_inner .tab-content .tab-pane ul li .media {
+  margin-left: 100px;
+}
 @media (max-width: 767px) {
   .mytabs_area .tabs_inner .tab-content .tab-pane ul li .media {
     display: block;
+    margin-left: 0px;
   }
 }
 .mytabs_area .tabs_inner .tab-content .tab-pane ul li .media .date {
-  padding-right: 150px;
+  padding-right: 140px;
+  margin-left: 25px;
+}
+@media (max-width: 767px) {
+  .mytabs_area .tabs_inner .tab-content .tab-pane ul li .media .date {
+    margin-left: 0px;
+  }
 }
 .mytabs_area .tabs_inner .tab-content .tab-pane ul li .media .date p {
   color: rgba(255, 255, 255, 0.75);
@@ -387,7 +411,7 @@ button {
 .mytabs_area .tabs_inner .tab-content .tab-pane ul li .media .media-body p {
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 0px;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .welcome_area {
@@ -515,12 +539,4 @@ button {
   text-align: center;
   color: #fff;
   font-size: 1.6rem;
-}
-
-.navbar-toggler {
-  outline: none !important;
-}
-.navbar-toggler .navbar-toggler-icon {
-  width: 3rem;
-  height: 3rem;
 }
